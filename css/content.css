@@ -1,0 +1,157 @@
+/* resets */
+*{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+body { margin:0px; padding:0px; }
+
+/* main */
+.header-image {
+    width: 100%; /* hoặc chiều rộng cụ thể bạn muốn */
+    height: 200px; /* hoặc chiều cao cụ thể bạn muốn */
+    object-fit: cover; /* Đảm bảo hình ảnh che phủ toàn bộ khu vực mà không bị méo */
+}
+header {
+    height: 360px;
+}
+header h4 {
+    background-color: rgba(18,72,120, 0.8);
+    color: #fff;
+    padding: 0 1rem;
+    position: absolute;
+    top: 2rem; 
+    left: 2rem;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+footer { 
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+	font-size: 30px;
+}
+h1{
+	font-size: 36px;
+	color:blue;
+
+}
+h2 {
+	font-size: 30px;
+}
+h3{
+	font-size: 33px;
+}
+article {
+    margin-left: 170px;
+    padding: 1em;
+    overflow: hidden;
+	margin-right: 170px;
+	font-size: 28px;
+}	
+.a {
+	display: flex; 
+	text-align: justify; 
+    font-size: 25px;
+}
+/*-----------------------------------------------------*/
+.center p{  width: 500px;  border: 1px;  padding: 2px;font-size:25px;}
+.left {  float: left;  width: 500px;  border: 1px;  padding: 2px;font-size:25px;margin-top:-30px;
+        
+}
+.left1 {  float: left;  width: 500px; height: 55%;  border: 1px;  padding: 2px; color:brown;}
+.left1 ul {list-style-type: square; 
+            margin-left: 25px;
+            line-height: 1.5;
+}
+.left p{
+    font-size:25px;
+    border: 1px;  padding: 2px;
+}
+.left1 p{
+    font-size:25px; margin-top:-30px;
+    border: 1px;  padding: 2px;
+}
+.left2 {  float: left;  width: 500px; height: 60%;  border: 1px;  padding: 2px; color:brown;}
+.left2 ul {list-style-type: square; 
+            margin-left: 25px;
+            line-height: 1.5;
+}
+.left2 p{
+    font-size:25px; margin-top:-30px; margin-bottom:-20px;
+    border: 1px;  padding: 2px;
+}
+.right {  float: right;  width: 500px;  border: 1px;  padding: 2px; margin-top:-30px;}
+.right p, ul,li {font-size:25px;}
+.right1 {  float: right;  width: 500px;  border: 1px;  padding: 2px; margin-top:-30px;}
+.right1 p, ol,li {font-size:25px;}
+
+nav{
+    margin: 0;
+}
+p{
+	font-size: 20px;
+	color:rgb(37, 198, 37);
+	text-align: bold;
+	line-height: 1.5;
+}
+ul, li, i{
+	font-size: 20px;
+	text-align: justify;
+	line-height: 1.5;
+}
+
+span h3{
+    color:#fa0d0d;
+    font-size: 20px;
+}
+.b {
+	display: flex; 
+	text-align: justify;
+	font-size:20px ;   
+    line-height: 1.5; 
+}
+/*------------------------*/
+.wrap {
+    height: 50px;
+    position: relative;
+    
+    &:nth-of-type(2n) {
+      background:white;
+    }
+  }
+  
+  .fill-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    width: 100%;
+  }
+  
+  .btn {
+    border-radius: 3px;
+    text-decoration: none;
+    position: relative;
+    font-size: 16pt;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    padding: 16px;
+    border: 1px solid blue;
+    text-align: center;
+    z-index: 20;
+    color:white;
+    background-color: blue;
+    transition: all transition-len cubic-bezier(rgb(12, 85, 124)); 
+  }
+  
+  .btn:hover {
+    color: rgb(151, 151, 227);
+  }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="TamTravel" content="width=device-width, initial-scale=1.0">
+    <title>TamTravel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Dangki.css">
+    <link rel="stylesheet" href="../css/Dangki.java">
+    <link rel="stylesheet" href="../css/ThamQuan.css">
+    <link rel="stylesheet" href="../css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+<body>
+  <header>
+    <div class="dulich">
+        <div class="header-content row">
+            <div class="header-logo">
+                <img src="../images/imglogo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <ul>
+                  <li><a href="./TrangChu.html"target="_blank">Trang Chủ</a></li>
+                  <li><a href="./GioiThieu.html"target="_blank"> Giới Thiệu </a></li>
+                  <li><a href="./ThamQuan.html"target="_blank"> Tham Quan </a></li>
+                  <li><a href="./Lienhe.html"target="_blank"> Liên Hệ </a></li>
+                  <li><a href="./Dangki.html"> Đăng Kí </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!----------------------------------------------------------------------->
+<center>
+  <video width="93%" controls autoplay>
+    <source src="https://videos.pexels.com/video-files/1456685/1456685-hd_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</center>
+
+
+<article>
+</br>
+</br>
+<h1 class="Dangki"> Đăng Kí </h1>
+<form >
+  <div class="elem-group">
+    <label for="name">Họ Và Tên</label>
+    <input type="text" id="name" name="visitor_name" placeholder="Họ Và Tên" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="Tamtravel@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Số Điện Thoại</label>
+    <input type="tel" id="phone" name="visitor_phone" placeholder="0982126943" pattern=(\d{0})) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">Người lớn</label>
+    <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="child">Trẻ em</label>
+    <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkin-date">Ngày bắt đầu</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+  <div class="elem-group inlined">
+    <label for="checkout-date">Ngày kết thúc</label>
+    <input type="date" id="checkout-date" name="checkout" required>
+  </div>
+  <div class="elem-group">
+    <label for="room-selection">Quy Nhon</label>
+    <select id="room-selection" name="room_preference" required>
+        <option value="">Chọn Tour</option>
+        <option value="connecting">Tour03</option>
+        <option value="connecting">Tour04</option>
+        <option value="connecting">Tour05</option>
+        <option value="connecting">Tour06</option>
+        <option value="connecting">Tour07</option>
+        <option value="connecting">Tour08</option>
+    </select>
+  </div>
+  <hr>
+  <div class="Ghi chú thêm">
+    <label for="message">Ghi chú</label>
+    <textarea id="message" name="visitor_message" placeholder="Nội dung" required></textarea>
+  </div>
+  <button type="submit">Đặt Ngay</button>
+</form>
+</article>
+</body>
+<!------------------------------>
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <h3>TAMTRAVEL</h3>
+
+    <p class="footer-links">
+          
+      <a href="./TrangChu.html" class="link-1">Trang chủ</a>
+      
+      <a href="./GioiThieu.html">Giới thiệu</a>
+    
+      <a href="./ThamQuan.html">Tham quan</a>
+      
+      <a href="./Lienhe.html">Liên hệ</a>
+    </p>
+
+    <p class="footer-company-name">TamTravel © 2024</p>
+  </div>
+
+  <div class="footer-center">
+
+    <div>
+        <i class="fa fa-map-marker"></i>
+      <p><span>12 Nguyễn Văn Bảo</span> Phường 4, Quận Gò Vấp, TP.HCM</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>01234567</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">support@tamtravel.com</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+
+    <p class="footer-company-about">
+      <span>About TamTravel</span>
+      TamTravel là một công ty du lịch chuyên cung cấp dịch vụ tour du lịch tới nhiều điểm đến hấp dẫn ở Quy Nhơn Tỉnh Bình Định. Với đội ngũ hướng dẫn viên chuyên nghiệp và kinh nghiệm, TamTravel cam kết mang đến cho khách hàng những trải nghiệm du lịch đáng nhớ và an toàn.
+    </p>
+
+    <div class="footer-icons">
+
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+
+    </div>
+
+  </div>
+
+</footer>
+</html>

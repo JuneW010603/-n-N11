@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="TamTravel" content="width=device-width, initial-scale=1.0">
+    <title>TamTravel</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+    <header>
+        <div class="dulich">
+            <div class="header-content row">
+                <div class="header-logo">
+                    <img src="../images/imglogo.png" alt="">
+                </div>
+                <div class="header-nav">
+                    <ul>
+                      <li><a href="./TrangChu.html">Trang Chủ</a></li>
+                      <li><a href="./GioiThieu.html"target="_blank"> Giới Thiệu </a></li>
+                      <li><a href="./ThamQuan.html"target="_blank"> Tham Quan </a></li>
+                      <li><a href="./Lienhe.html"target="_blank"> Liên Hệ </a></li>
+                      <li><a href="./Dangki.html"target="_blank"> Đăng Kí </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-------slider---<a href="./Trang1.html"target="_blank">
+                        <button>Tour BD03
+                    </button>          </a>    ---->
+    <section class="slider owl-carousel owl-theme">
+       <div class="slider-item slider-item-a">
+        <div class="dulich">
+            <div class="slider-item-text">
+                <p><span style="font-weight: bold;font-size: 30px;">570.000</span><sup>đ</sup>/1 Ngày</p> <br>
+                <p style="font-weight: bold;font-size: 40px;">HÒN KHÔ & KỲ CO - NGẮM SAN HÔ - ĂN TRƯA COCOCAMP</p> <br>
+                <p>TamTravel sẽ đưa Quý khách khám phá sự hoang sơ của đảo Hòn Khô,
+                <p>check in con đường giữa biển cùng cây cầu ven núi tuyệt đẹp và sự hùng vĩ của Kỳ Co Eo Gió</p> <br>
+                <p ><a href="./Trang1.html"target="_blank">
+                    <button>Tour BD03
+                </button>          </a></p>
+            </div>
+        </div>
+       </div>
+       <div class="slider-item slider-item-b">
+        <div class="dulich">
+            <div class="slider-item-text">
+                <p><span style="font-weight: bold;font-size: 30px;">870.000</span><sup>đ</sup>/1 Ngày</p> <br>
+                <p style="font-weight: bold;font-size: 40px;">CÙ LAO XANH - NGẮM SAN HÔ - THAM QUAN NGỌN HẢI ĐĂNG</p> <br>
+                <p>TamTravel sẽ đưa Quý khách đến cảnh đẹp hữu tình và không gian yên bình. </p>
+                <p>Nằm ở vùng núi cao, mang đến cho du khách cơ hội thư giãn </p> 
+                 <p>và tận hưởng không khí trong lành của núi rừng</p> <br>
+                <p><a href="./Trang2.html"target="_blank">
+                    <button>Tour BD04
+                </button>          </a></p>
+            </div> 
+        </div>
+       </div>
+       <div class="slider-item slider-item-c">
+        <div class="dulich">
+            <div class="slider-item-text">
+                <p><span style="font-weight: bold;font-size: 30px;">870.000</span><sup>đ</sup>/1 Ngày</p> <br>
+                <p style="font-weight: bold;font-size: 40px;">HÒN KHÔ - KỲ CO - EO GIÓ - CHÙA LINH PHONG - KDN TRUNG LƯƠNG</p> <br>
+                <p>TamTravel sẽ đưa Quý khách tới một hòn đảo nằm ngoài khơi biển Bình Định,du lịch tuyệt vời</p> 
+                <p>thu hút du khách bởi cảnh đẹp hùng vĩ và không gian yên bình Với bãi</p>
+                <p>biển trải dài, cát trắng mịn và nước biển trong xanh</p> <br>
+                <p><a href="./Trang3.html"target="_blank">
+                    <button>Tour BD05
+                </button>          </a></p>
+            </div>
+        </div>
+       </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
+
+$('.owl-carousel').owlCarousel({ 
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay:true, 
+    autoplayTimeout:3000,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+    </script>
+</body>
+</html>

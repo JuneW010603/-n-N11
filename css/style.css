@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.slider-item{
+    width: 100vw;
+    height: 100vh;
+    position: relative; /*Trang đầu tối*/
+}
+.header-logo img {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -30px; /* Điều chỉnh giá trị top để di chuyển logo lên phía trên */
+    left: 1%; /* Để logo nằm giữa trang */
+    transform: translateX(-1%);
+    margin: 10px;
+}
+.slider-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0,4);
+}
+.slider-item-a {
+    background-image: url('../images/img3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-item-b {
+    background-image: url('../images/imgh.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-item-c {
+    background-image: url('../images/img2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*OwlCarousel*/
+.owl-prev{ /*Thanh kéo ngang thành thanh kéo hàng dọc tay phải*/
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px !important;
+    color: rebeccapurple !important;
+}
+.owl-next{ /*Thanh kéo mũi tên ngang thành thanh kéo hàng dọc tay phải {còn màu ở mũi tên */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px !important;
+    color: rebeccapurple !important;
+}
+.owl-prev,.owl-next:hover{ /*Bỏ màu dấu mũi tên */
+    background: none !important;
+}
+.owl-dots { /*Đưa dấu 3 chấm hàng ngang lên hàng dọc*/
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+.owl-dot span {
+    width: 15px!important;
+    height: 15px!important;
+    margin: 0!important;
+    background-color: transparent!important;
+
+}
+.owl-dot {
+    width: 23px;
+    height: 23px;
+    border: 2px solid #fff!important;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 6px;
+
+}
+.owl-dot.active span {
+    background-color: #fff!important;
+}
+/*-------------Conten------------*/
+.slider-item{
+    display: flex;
+    align-items: center;
+}
+.dulich{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    /* background-color: #fff; */
+}
+.slider-item-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ /* Chữ */
+.slider-item-text p {
+    color: #fff;
+}
+.slider-item-text p button{  /*-------------Xem tuor------------*/
+    padding: 15px 30px;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 20px;
+}
+.slider-item-text p button:hover {
+    background-color: #0000FF;
+}
+header{
+   position: fixed;
+   z-index: 1000;
+   width: 100%; 
+}
+.row {
+    display: flex;
+}
+.header-content {
+    justify-content: space-between;
+    padding: 12px 0;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.header-nav>ul {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.header-nav ul li {
+    margin-left: 20px;
+    padding: 6px 0;
+}
+.header-nav ul li:hover a {
+    color: #0000FF;
+}
+.header-nav > ul > li:last-child a {
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+.header-nav ul li:last-child:hover a {
+    color: #fff;
+}
+.header-nav ul li:last-child a:hover {
+    background-color: #008800;
+}
+.header-nav ul li a  {
+    color: #0f0f0f;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.btn_input2{
+    width: 500px;
+    margin-left: 200px;
+}
+.btn_input2 input{
+    border:1px solid blue;
+    padding: 10px;
+    font-size: 22px;
+    background-color: #0000FF;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+

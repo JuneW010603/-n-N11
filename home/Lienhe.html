@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Liên hệ</title>
+        <link rel="stylesheet" href="../css/Lienhe.css">
+        
+    <link rel="stylesheet" href="../css/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:  sans-serif;
+    }
+    section .container .contactinfo1 p {
+         color: white; /* Màu chữ trắng */
+        text-align: justify; /* Căn đều nội dung */
+        
+}
+
+    section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+    }
+    
+    section .container {
+        position: relative;
+        min-width: 1100px;
+        min-height: 550px;
+        display: flex;
+        z-index: 1000;
+    }
+    
+    section .container .contactinfo{
+        position: absolute;
+        top: 40px;
+        width: 350px;
+        height: calc(100% - 80px);
+        background: #1d6fae; /*màu khung ô*/
+        z-index: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    section .container .contactinfo h2 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    section .container .contactinfo .info {
+        position: relative;
+        margin: 20px 0;
+    }
+    
+    section .container .contactinfo .info li{
+        position: relative;
+        list-style: none;
+        display: flex;
+        margin: 20px 0;
+        cursor: pointer;
+        align-items: flex-start;
+    }
+    
+    section .container .contactinfo .info li span:nth-child(1) {
+        width: 30px;
+        min-width: 30px;
+    }
+    
+    section .container .contactinfo .info li span:nth-child(1) img {
+        max-width: 100%;
+        filter: invert(1);
+        opacity: 0.6;
+    }
+    
+    section .container .contactinfo .info li span:nth-child(2) {
+        color: #fff;
+        margin-left: 10px;
+        font-weight: 300;
+        opacity: 0.6;
+    }
+    
+    section .container .contactinfo .info li:hover span:nth-child(1) img,
+    section .container .contactinfo .info li:hover span:nth-child(2) {
+        opacity: 1;
+    }
+    
+    section .container .contactinfo .sci {
+        position: relative;
+        display: flex;
+    }
+    
+    section .container .contactinfo .sci li {
+        list-style: none;
+        margin-right: 15px;
+    }
+    
+    section .container .contactinfo .sci li a{
+        text-decoration: none;
+    }
+    
+    section .container .contactinfo .sci li a img{
+        filter: invert(1);
+        max-width: 90%;
+        opacity: 0.5;
+    }
+    
+    section .container .contactinfo .sci li:hover a img{
+        opacity: 1;
+    }
+    
+    section .container .contactForm {
+        position: absolute;
+        padding: 70px 50px;
+        background: #fff;
+        margin-left: 150px;
+        padding-left: 250px;
+        width: calc(100% - 150px);
+        height: 100%;
+        box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+    }
+    
+    section .container .contactForm  h2 {
+        color: #1313c0; /*màu chữ*/
+        font-size: 24px;
+        font-weight: 500;
+    }
+    
+    section .container .contactForm .formBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    
+    section .container .contactForm .formBox .inputBox {
+        position: relative;
+        margin: 0 0 35px 0;
+    }
+    
+    section .container .contactForm .formBox .inputBox.w50 {
+        width: 47%;
+    }
+    
+    section .container .contactForm .formBox .inputBox.w100 {
+        width: 100%;
+    }
+    
+    section .container .contactForm .formBox .inputBox input,
+    section .container .contactForm .formBox .inputBox textarea {
+        width: 100% !important;
+        padding: 5px 0;
+        resize: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        border: none;
+        border-bottom: 1px solid #777;
+        outline: none;
+    }
+    
+    section .container .contactForm .formBox .inputBox textarea {
+        min-height: 120px;
+    }
+    
+    section .container .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+    
+    section .container .contactForm .formBox .inputBox input:focus ~span,
+    section .container .contactForm .formBox .inputBox textarea:focus ~span,
+    section .container .contactForm .formBox .inputBox input:valid ~span,
+    section .container .contactForm .formBox .inputBox textarea:valid ~span {
+        transform: translateY(-20px);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #ff568c;
+    }
+    
+    section .container .contactForm .formBox .inputBox input[type="submit"] {
+        position: relative;
+        cursor: pointer;
+        background: #286995;
+        color: #fff;
+        border: none;
+        max-width: 150px;
+        padding: 12px;
+    }
+    
+    section .container .contactForm .formBox .inputBox input[type="submit"]:hover {
+        background: #ff568c;
+    }
+      </style>
+      <script>
+      var email = document.getElementById("email");
+    linebreak = document.createElement("br");
+    function sendEmail() {
+        var mobile = document.getElementById('mobile').value;
+        var yourMessage = document.getElementById("message").value;
+        var first = document.getElementById("firstname").value;
+        var last = document.getElementById("lastname").value;
+        document.location.href = "mailto:yashgoyalg400@gmail.com?subject="
+            + encodeURIComponent(first + " " + last)
+            + "&body=" + encodeURIComponent(mobile) + encodeURIComponent("\n") + encodeURIComponent(yourMessage);
+    }
+    
+      </script>
+    </head>
+    <body>
+    <header>
+        <div class="dulich">
+            <div class="header-content row">
+                <div class="header-logo">
+                    <img src="../images/imglogo.png" alt="">
+                </div>
+                <div class="header-nav">
+                    <ul>
+                      <li><a href="./TrangChu.html"target="_blank">Trang Chủ</a></li>
+                      <li><a href="./giới thiệu.html"target="_blank"> Giới Thiệu </a></li>
+                      <li><a href="./ThamQuan.html"> Tham Quan </a></li>
+                      <li><a href="./Lienhe.html"target="_blank"> Liên Hệ </a></li>
+                      <li><a href="./Dangki.html"target="_blank"> Đăng Kí </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <section>
+            <div class="container">
+                <div class="contactinfo">
+                    <div>
+                        <h2>Khu Vực Hồ Chí Minh</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="https://img.icons8.com/plasticine/48/000000/user-location.png"/></span>
+                                <span>12 Nguyễn Văn Bảo, Phường 4 Quận Gò Vấp<br></span>
+                            </li>
+                            <li>
+                                <span><img src="https://img.icons8.com/ios-filled/50/000000/download-mail.png"/></span>
+                                <span>TamTravel@gmail.com</span>
+                            </li>
+                            <li>
+                                <span><img src="https://img.icons8.com/fluent/100/000000/phone.png"/></span>
+                                <span>0123456789</span>
+                            </li>
+                        </ul>
+                    </div class="contactinfo1">
+                          <p> Để có thể đáp ứng được các yêu cầu và các ý kiến đóng góp của quý vị một cách nhanh chóng xin vui lòng liên hệ</p> 
+                </div>
+                <div class="contactForm">
+                    <h2>Thông Tin Của Bạn</h2>
+                    <form method="post" target="_blank">
+                        <div class="formBox">
+                            <div class="inputBox w50">
+                                <input id="firstname" type="text" name="" required>
+                                <span>Họ</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input id="lastname" type="text" name="" required>
+                                <span>Tên</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input id="email" type="text" name="" required>
+                                <span>Email</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input id="mobile" type="text" name="" required>
+                                <span>Số Điện Thoại</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <textarea id="message" name="" required></textarea>
+                                <span>Lời nhắn của bạn.....</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <input type="submit" value="Gửi" onclick="sendEmail()">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
